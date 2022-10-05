@@ -2,40 +2,19 @@ PATH
   remote: .
   specs:
     duo_universal_rails (0.1.0)
-      faraday
-      faraday_middleware
-      jwt
+      faraday (~> 0.11)
+      faraday_middleware (~> 0.14)
+      jwt (~> 1.5)
 
 GEM
   remote: https://rubygems.org/
   specs:
     diff-lcs (1.5.0)
-    faraday (1.10.2)
-      faraday-em_http (~> 1.0)
-      faraday-em_synchrony (~> 1.0)
-      faraday-excon (~> 1.1)
-      faraday-httpclient (~> 1.0)
-      faraday-multipart (~> 1.0)
-      faraday-net_http (~> 1.0)
-      faraday-net_http_persistent (~> 1.0)
-      faraday-patron (~> 1.0)
-      faraday-rack (~> 1.0)
-      faraday-retry (~> 1.0)
-      ruby2_keywords (>= 0.0.4)
-    faraday-em_http (1.0.0)
-    faraday-em_synchrony (1.0.0)
-    faraday-excon (1.1.0)
-    faraday-httpclient (1.0.1)
-    faraday-multipart (1.0.4)
-      multipart-post (~> 2)
-    faraday-net_http (1.0.1)
-    faraday-net_http_persistent (1.2.0)
-    faraday-patron (1.0.0)
-    faraday-rack (1.0.0)
-    faraday-retry (1.0.3)
-    faraday_middleware (1.2.0)
-      faraday (~> 1.0)
-    jwt (2.5.0)
+    faraday (0.17.5)
+      multipart-post (>= 1.2, < 3)
+    faraday_middleware (0.14.0)
+      faraday (>= 0.7.4, < 1.0)
+    jwt (1.5.6)
     multipart-post (2.2.3)
     rake (13.0.6)
     rspec (3.11.0)
@@ -51,7 +30,6 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.11.0)
     rspec-support (3.11.1)
-    ruby2_keywords (0.0.5)
 
 PLATFORMS
   ruby
