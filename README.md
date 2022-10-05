@@ -1,4 +1,4 @@
-# DuoUniversalRails
+# Duo Universal
 
 Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/duo_universal_rails`. To experiment with that code, run `bin/console` for an interactive prompt.
 
@@ -16,7 +16,24 @@ If bundler is not being used to manage dependencies, install the gem by executin
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+client = DuoUniversalRails::Client.new(client_id: ENV["DUO_CLIENT_ID"], client_secret: ENV["DUO_CLIENT_SECRET"], api_hostname: ENV["DUO_HOSTNAME"], redirect_uri: ENV["DUO_REDIRECT_URI"])
+
+client.health_check.ping
+
+
+client.auth.create_url(username: 'DUO_USER')
+
+result = client.token.exchange_authorization_code_for_2fa_result(code: 'CODE', username: 'DUO_USER')
+
+if result["sub"].present? && result["sub"] == 'username'
+    # Success
+else
+    # Error
+end
+
+
+```
 
 ## Development
 
